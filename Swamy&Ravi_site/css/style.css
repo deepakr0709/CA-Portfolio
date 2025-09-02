@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;700&display=swap');
+
+:root{
+  --bg: #0f172a; /* deep navy */
+  --card: #0b1220;
+  --accent: #6b46c1; /* purple */
+  --accent-2: #06b6d4; /* teal */
+  --muted: #94a3b8;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing: border-box}
+html,body{height:100%;margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(180deg,var(--bg) 0%, #071021 100%);color:#e6eef8;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{font-family:'Merriweather',serif;font-weight:700;font-size:1.4rem;color:var(--accent)}
+.nav a{color:var(--muted);margin-left:20px;text-decoration:none}
+.nav a:hover{color:#fff}
+
+.brand {
+  font-family: "Poppins", sans-serif;   /* clean modern font */
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #77a2e2;  /* dark navy look */
+  text-decoration: none;  /* remove underline */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.brand::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40%;
+  height: 3px;
+  background: #0077cc;  /* accent underline */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.brand:hover::after {
+  width: 100%;  /* expands underline on hover */
+}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:60px 0}
+.hero-left h1{font-size:2.6rem;margin:0 0 12px;color:#fff}
+.hero-left p{color:var(--muted);max-width:640px}
+.hero-cta{margin-top:18px}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:600;text-decoration:none}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#061221}
+.btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+/* card sections */
+.section{padding:48px 0;background:transparent}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .18s}
+.card:hover{transform:translateY(-6px)}
+.card h3{margin-top:0;color:#fff}
+.card p{color:var(--muted)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center}
+.profile{width:320px;border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+.profile img{width:100%;height:auto;display:block}
+
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.team-card{background:var(--glass);padding:16px;border-radius:12px;text-align:center}
+.team-card img{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:10px}
+
+/* Footer */
+.footer{border-top:1px solid rgba(255,255,255,0.03);padding:28px 0;margin-top:40px;color:var(--muted);text-align:center}
+
+/* responsive */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr; padding:40px 0}
+  .about-grid{grid-template-columns:1fr}
+}
