@@ -1,11 +1,15 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Swamy & Ravi</title>
-  <link rel="stylesheet" href="css/style.css"></head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
 
 <header class="container header">
-  <a href="index.html"  class="brand">Swamy & Ravi</a>
+  <a href="index.html" class="brand">Swamy & Ravi</a>
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -20,17 +24,41 @@
     <h2>Contact Us</h2>
     <p style="color:var(--muted)">Office Address</p>
     <p>No.90, Co-Operative 'A' Colony, K.K. Pudur, Saibaba Colony, Coimbatore-641038</p>
-    <p style="color:var(--muted);margin-top:8px">Phone: +91 422 2440971 | Email: <a href="mailto:sr_cas2004@yahoo.co.in">sr_cas2004@yahoo.co.in</a></p>
+    <p style="color:var(--muted);margin-top:8px">Phone: +91 422 2440971 | Email: 
+      <a href="mailto:sr_cas2004@yahoo.co.in">sr_cas2004@yahoo.co.in</a>
+    </p>
 
     <div style="display:grid;grid-template-columns:1fr 350px;gap:30px;margin-top:26px">
       <div class="card">
         <h3>Send a Message</h3>
-        <!-- This form can be wired to Formspree, Netlify Forms, or your own API -->
-        <form action="mailto:sr_cas2004@yahoo.co.in" method="POST" enctype="text/plain">
-          <label style="display:block;margin-top:10px">Name<br/><input type="text" name="name" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06)"/></label>
-          <label style="display:block;margin-top:10px">Email<br/><input type="email" name="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06)"/></label>
-          <label style="display:block;margin-top:10px">Message<br/><textarea name="message" rows="6" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06)"></textarea></label>
-          <button class="btn btn-primary" style="margin-top:12px" type="submit">Send</button>
+        <!-- Netlify-enabled form with redirect -->
+        <form name="contact" netlify action="/thank-you.html" method="POST">
+          <p>
+            <label>Name<br/>
+              <input type="text" name="name" required 
+                     style="width:100%;padding:10px;border-radius:8px;
+                            border:1px solid rgba(255,255,255,0.06)"/>
+            </label>
+          </p>
+          <p>
+            <label>Email<br/>
+              <input type="email" name="email" required 
+                     style="width:100%;padding:10px;border-radius:8px;
+                            border:1px solid rgba(255,255,255,0.06)"/>
+            </label>
+          </p>
+          <p>
+            <label>Message<br/>
+              <textarea name="message" rows="6" required
+                        style="width:100%;padding:10px;border-radius:8px;
+                               border:1px solid rgba(255,255,255,0.06)"></textarea>
+            </label>
+          </p>
+          <p>
+            <button class="btn btn-primary" type="submit" style="margin-top:12px">
+              Send
+            </button>
+          </p>
         </form>
       </div>
 
@@ -38,7 +66,9 @@
         <h3>Quick Contact</h3>
         <p style="color:var(--muted)">For faster response, call us during business hours.</p>
         <p style="margin-top:12px"><strong>Phone:</strong> +91 422 2440971</p>
-        <p><strong>Email:</strong> <a href="mailto:sr_cas2004@yahoo.co.in">sr_cas2004@yahoo.co.in</a></p>
+        <p><strong>Email:</strong> 
+          <a href="mailto:sr_cas2004@yahoo.co.in">sr_cas2004@yahoo.co.in</a>
+        </p>
       </div>
     </div>
   </section>
@@ -49,4 +79,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-</body></html>
+</body>
+</html>
